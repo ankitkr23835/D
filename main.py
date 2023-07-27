@@ -10,7 +10,7 @@ API_HASH = '74c9033cbfd088fadf148295595d8eb4'
 BOT_TOKEN = '6467854416:AAE_t361n2MPdejif5jDRCfVcsKkUr2ARIk'
 
 # Initialize the Telegram client
-client = TelegramClient('telethon_bot_session', API_ID, API_HASH)
+client = TelegramClient('telethon_bot_session', API_ID, API_HASH).start(bot_token=BOT_TOKEN)
 
 # Initialize the Translator
 translator = Translator()
@@ -40,5 +40,4 @@ async def translate_message(event):
 
 # Start th
 #keep_alive.keep_alive()
-client.start()
 client.run_until_disconnected()
